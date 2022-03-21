@@ -1,8 +1,12 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+// const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+
 
 module.exports = {
     entry: './src/index.js', // абсолютный путь, файл начала, нужен обязательно
+    mode: 'development', // режим разработчика. По-умолчанию он всегда production
     output: {
         filename: 'main.js'
     },
@@ -12,7 +16,13 @@ module.exports = {
             filename: 'index.html',
         }),
         new MiniCssExtractPlugin(),
+        new TerserWebpackPlugin(),
+        // new OptimizeCssAssetsWebpackPlugin(),
     ],
+    // optimization:{
+    //     minimize:true,
+    //     minimizer: [new TerserWebpackPlugin(), new OptimizeCssAssetsWebpackPlugin()]
+    // },
     module: {
         rules: [
             {

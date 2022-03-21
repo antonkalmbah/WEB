@@ -1,1 +1,2 @@
-document.write("Hello, world_2!");
+/*! For license information please see main.js.LICENSE.txt */
+(()=>{var __webpack_modules__={"./src/index.js":()=>{eval("document.write('Hello, world_2!');\n\n//# sourceURL=webpack://project_npm/./src/index.js?")}},__webpack_exports__={};__webpack_modules__["./src/index.js"]()})();
