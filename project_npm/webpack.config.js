@@ -5,15 +5,21 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 
 module.exports = {
-    entry: './src/index.js', // абсолютный путь, файл начала, нужен обязательно
+    entry: './src/new.ts', // абсолютный путь, файл начала, нужен обязательно
     mode: 'development', // режим разработчика. По-умолчанию он всегда production
     output: {
         filename: 'main.js'
+    },
+    devServer: {
+        // contentBase: './dist',   // при включеннии именно этой строки, происходит ошибка
+        port: 3030,  // указываем в ручную номер порта
+        open: true,  // автоматически открывается страничку в браузере
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.pug',
             filename: 'index.html',
+            title: 'Development',
         }),
         new MiniCssExtractPlugin(),
         new TerserWebpackPlugin(),
@@ -40,6 +46,10 @@ module.exports = {
                 // option: {
                 //     pretty: true
                 // }
+            },
+            {
+                test: /\.ts$/,
+                use: 'ts-loader'
             }
         ]
     },
