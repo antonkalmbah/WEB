@@ -5,7 +5,7 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 
 module.exports = {
-    entry: './src/new.ts', // абсолютный путь, файл начала, нужен обязательно
+    entry: './src/index.js', // абсолютный путь, файл начала, нужен обязательно
     mode: 'development', // режим разработчика. По-умолчанию он всегда production
     output: {
         filename: 'main.js'
@@ -14,6 +14,7 @@ module.exports = {
         // contentBase: './dist',   // при включеннии именно этой строки, происходит ошибка
         port: 3030,  // указываем в ручную номер порта
         open: true,  // автоматически открывается страничку в браузере
+        hot: true
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -50,7 +51,25 @@ module.exports = {
             {
                 test: /\.ts$/,
                 use: 'ts-loader'
-            }
+            },
+            {
+                'body-leading-blank': [2, 'always'],
+                'footer-leading-blank': [2, 'always'],
+                'header-max-length': [2, 'always', 72],
+                'scope-case': [2, 'always', 'lower-case'],
+                'subject-empty': [2, 'never'],
+                'subject-full-stop': [2, 'never', '.'],
+                'type-case': [2, 'always', 'lower-case'],
+                'type-empty': [2, 'never'],
+                'type-enum': [
+                    2,
+                    'always',
+                    [
+                        'feat',
+                        'fix',
+                    ],
+                ],
+            },
         ]
     },
 };
