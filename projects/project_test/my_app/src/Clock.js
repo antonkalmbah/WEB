@@ -15,15 +15,18 @@ class Clock extends React.Component {
         );
     }
 
+    // Вызывается перед размонтированием компонента
     componentWillUnmount(){
+        // функция для остановки таймера
         clearInterval(this.timerID);
     }
 
-    // tick() {
-    //     this.setState({
-    //         date: new Date()
-    //     });
-    // }
+    // в методе tick обновляет время в состоянии компонента;
+    tick() {
+        this.setState({
+            date: new Date()
+        });
+    }
   
     render() {
       return (
@@ -35,4 +38,4 @@ class Clock extends React.Component {
     }
   }
 
-  export
+  export default Clock;
