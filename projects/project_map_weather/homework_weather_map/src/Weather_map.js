@@ -1,7 +1,6 @@
-import React from 'react';
 import { YMaps, Map } from 'react-yandex-maps';
 
-const Weather = () => (
+const Maps = () => (
   <YMaps>
     <div>
       My awesome application with maps!
@@ -10,4 +9,4 @@ const Weather = () => (
   </YMaps>
 );
 
-export default Weather;
+export default Maps;
