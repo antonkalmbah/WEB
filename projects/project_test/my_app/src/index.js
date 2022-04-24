@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Clock from './Clock';
 import PersonList from './JsonPars';
+import UsePositionDemo from './Map_2';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,9 +14,9 @@ root.render(
     <App />
     <Clock />
     <PersonList />
+    <UsePositionDemo />
   </React.StrictMode>
 );
 
 
 reportWebVitals();
-

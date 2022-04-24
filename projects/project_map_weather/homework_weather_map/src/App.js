@@ -1,12 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Map from './Map'
 
 
 function App() {
   return (
     <div className="App">
-      <Map />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
