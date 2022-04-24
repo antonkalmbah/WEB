@@ -1,5 +1,5 @@
 import React from "react";
-
+// import PersonList from "./JsonPars";
 
 class Clock extends React.Component {
     constructor(props) {
