@@ -3,18 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Clock from './Clock';
-import PersonList from './JsonPars';
-import UsePositionDemo from './Map_2';
+// import Clock from './Clock';
+// import PersonList from './JsonPars';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Clock />
-    <PersonList />
-    <UsePositionDemo />
+    {/* <Clock /> */}
+    {/* <PersonList /> */}
+    {/* <UsePositionDemo /> */}
   </React.StrictMode>
 );
 
